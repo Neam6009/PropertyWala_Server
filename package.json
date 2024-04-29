@@ -1,0 +1,44 @@
+{
+  "name": "property-wala",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -e js,ejs app",
+    "start": "nodemon ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhishek1438/ffsd-project.git"
+  },
+  "author": "Abhishek Manithia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhishek1438/ffsd-project/issues"
+  },
+  "homepage": "https://github.com/Abhishek1438/ffsd-project#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "froala-editor": "^4.0.18",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.2.0",
+    "mongoose": "^7.0.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.2.0",
+    "nodemailer": "^6.9.1",
+    "nodemon": "^2.0.22",
+    "path": "^0.12.7",
+    "rotating-file-stream": "^3.2.1",
+    "util": "^0.12.5",
+    "xml": "^1.0.1"
+  }
+}
