@@ -60,6 +60,10 @@ app.post(
   userController.wishlist
 );
 
+app.get('/dockerTest', (req, res) => {
+  res.send("docker works!!!")
+})
+
 app.get('/csrf-token', (req, res) => {
   res.status(200).json({ csrfToken: req.csrfToken() });
 });
