@@ -60,16 +60,12 @@ app.post(
   userController.wishlist
 );
 
-app.get('/', (req, res) => {
-  res.send('PropertyWala backend')
-})
-
 app.get('/dockerTest', (req, res) => {
   res.send("docker works!!!")
 })
 
 app.get('/csrf-token', (req, res) => {
-  res.status(200).json({ csrfToken: "csrfToken" });
+  res.status(200).json({ csrfToken: "oyF2qjYK-iYUqXQ4OA8xXoNY2tL-eN5xwRq0" });
 });
 
 app.get("/users/all", userController.getAllUsers);
