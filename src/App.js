@@ -16,15 +16,15 @@ const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
 
 const app = express();
-// const csrfProtection = csrf({ cookie: true });
+const csrfProtection = csrf({ cookie: true, origin: });
 
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(jsonParser);
-// app.use(csrfProtection);
+app.use(csrfProtection);
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: ["http://50.19.14.245", "http://localhost:5173"],
   credentials: true,
   optionSuccessStatus: 200,
 };
