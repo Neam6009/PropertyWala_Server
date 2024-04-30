@@ -3,7 +3,7 @@ const blogModel = require("../models/blog_model");
 const doenv = require("dotenv");
 
 doenv.config({
-	path: "../.env",
+	path: "./.env",
 });
 
 MongoDB_URI = process.env.MONGODB_URI;
