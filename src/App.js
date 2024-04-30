@@ -16,6 +16,13 @@ const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
 
 const app = express();
+const corsOptions = {
+  origin: ["https://property-wala-client-vercel.vercel.app/", "http://localhost:5173"],
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 const csrfProtection = csrf({ cookie: true });
 
 app.use(cookieParser());
@@ -23,13 +30,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(jsonParser);
 app.use(csrfProtection);
 
-const corsOptions = {
-  origin: "http://localhost:5173",
-  credentials: true,
-  optionSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions));
 
 doenv.config({
   path: "./.env",
