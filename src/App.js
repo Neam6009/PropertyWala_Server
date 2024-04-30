@@ -65,7 +65,7 @@ app.get('/dockerTest', (req, res) => {
 })
 
 app.get('/csrf-token', (req, res) => {
-  res.status(200).json({ csrfToken: "oyF2qjYK-iYUqXQ4OA8xXoNY2tL-eN5xwRq0" });
+  res.status(200).json({ csrfToken: req.csrfToken() });
 });
 
 app.get("/users/all", userController.getAllUsers);
