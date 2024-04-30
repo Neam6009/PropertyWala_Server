@@ -3,11 +3,12 @@ const blogModel = require("../models/blog_model");
 const doenv = require("dotenv");
 
 doenv.config({
-	path: "./.env",
+	path: "../.env",
 });
 
-const MongoDB_URI = process.env.MONGODB_URI;
-console.log(MongoDB_URI);
+MongoDB_URI = process.env.MONGODB_URI;
+
+console.log(process.env.MONGODB_URI)
 
 mongoose.connect("mongodb+srv://neelesh:ZgSQfiS6kziYXoIT@propertywaladeployment.dhdxtm8.mongodb.net/WBD_DB?retryWrites=true&w=majority&appName=propertyWalaDeployment", {
 	useNewUrlParser: true,
