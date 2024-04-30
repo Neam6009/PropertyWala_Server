@@ -27,4 +27,4 @@ jobs:
       - name: Delete old container
         run: docker rm -f propertywala_backend-container 
       - name: Run Docker Container
-        run: docker run -d -p 3003:3003 --name propertywala_backend-container -e MONGODB_URI='${{ secrets.MONGODB_URI }}' neam6009/propertywala_backend 
+        run: docker run -d -p 3003:3003 --name propertywala_backend-container neam6009/propertywala_backend 
