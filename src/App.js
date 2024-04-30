@@ -60,6 +60,10 @@ app.post(
   userController.wishlist
 );
 
+app.get('/', (req, res) => {
+  res.send('PropertyWala backend')
+})
+
 app.get('/dockerTest', (req, res) => {
   res.send("docker works!!!")
 })
