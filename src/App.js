@@ -24,7 +24,7 @@ app.use(jsonParser);
 app.use(csrfProtection);
 
 const corsOptions = {
-  origin: ["http://50.19.14.245", "http://localhost:5173"],
+  origin: "http://localhost:5173",
   credentials: true,
   optionSuccessStatus: 200,
 };
