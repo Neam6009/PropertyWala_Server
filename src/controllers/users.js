@@ -11,12 +11,14 @@ const csrfProtection = csrf({ cookie: true });
 const doenv = require("dotenv");
 
 doenv.config({
-  path: "./.env",
+  path: "../.env",
 });
 
-// MongoDB_URI = process.env.MONGODB_URI;
+MongoDB_URI = process.env.MONGODB_URI;
 
-mongoose.connect("mongodb+srv://neelesh:ZgSQfiS6kziYXoIT@propertywaladeployment.dhdxtm8.mongodb.net/WBD_DB?retryWrites=true&w=majority&appName=propertyWalaDeployment", {
+console.log(process.env.MONGODB_URI)
+
+mongoose.connect(MongoDB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
