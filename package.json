@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -e js,ejs app",
-    "start": "cd src && node_modules/.bin/nodemon App.js"
+    "start": "cd src && nodemon App.js"
   },
   "repository": {
     "type": "git",
