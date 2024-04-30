@@ -16,12 +16,12 @@ const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
 
 const app = express();
-const csrfProtection = csrf({ cookie: true });
+// const csrfProtection = csrf({ cookie: true });
 
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(jsonParser);
-app.use(csrfProtection);
+// app.use(csrfProtection);
 
 const corsOptions = {
   origin: "http://localhost:5173",
@@ -69,7 +69,7 @@ app.get('/dockerTest', (req, res) => {
 })
 
 app.get('/csrf-token', (req, res) => {
-  res.status(200).json({ csrfToken: req.csrfToken() });
+  res.status(200).json({ csrfToken: "csrfToken" });
 });
 
 app.get("/users/all", userController.getAllUsers);
