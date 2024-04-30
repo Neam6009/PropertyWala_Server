@@ -6,11 +6,7 @@ doenv.config({
 	path: "./.env",
 });
 
-MongoDB_URI = process.env.MONGODB_URI;
-
-console.log(process.env.MONGODB_URI)
-
-mongoose.connect(MongoDB_URI, {
+mongoose.connect("mongodb+srv://neelesh:ZgSQfiS6kziYXoIT@propertywaladeployment.dhdxtm8.mongodb.net/WBD_DB?retryWrites=true&w=majority&appName=propertyWalaDeployment", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 })
