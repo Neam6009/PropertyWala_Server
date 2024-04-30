@@ -16,7 +16,7 @@ const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
 
 const app = express();
-const csrfProtection = csrf({ cookie: true, origin: });
+const csrfProtection = csrf({ cookie: true });
 
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
