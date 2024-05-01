@@ -24,7 +24,7 @@ mongoose
     }
   )
   .then(() => {
-    console.log("Connected to MongoDB");
+    // console.log("Connected to MongoDB");
     // Now you can start using your mongoose models
   })
   .catch((error) => {
@@ -56,7 +56,7 @@ exports.login = async (req, res) => {
         const token = jwt.sign({ id: id }, "1234", {
           expiresIn: "90d",
         });
-        console.log("The Token is " + token);
+        // console.log("The Token is " + token);
         const cookieOptions = {
           expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
           httpOnly: true,

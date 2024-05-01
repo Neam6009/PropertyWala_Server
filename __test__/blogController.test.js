@@ -25,49 +25,48 @@ describe("GET /all", () => {
   });
 });
 
-// describe("POST /insert", () => {
-//   test("should insert a blog", async () => {
-//     // Mocking request body
-//     const requestBody = {
-//       blog: {
-//         blogTitle: "Test Blog Title",
-//         blogContent: "Test Blog Content",
-//       },
-//       image: "test_image_url",
-//       user: {
-//         name: "Test User",
-//         _id: "test_user_id",
-//       },
-//     };
+describe("POST /insert", () => {
+  test("should insert a blog", async () => {
+    // Mocking request body
+    const requestBody = {
+      blog: {
+        blogTitle: "Test Blog Title",
+        blogContent: "Test Blog Content",
+      },
+      image: "test_image_url",
+      user: {
+        name: "Test User",
+        _id: "test_user_id",
+      },
+    };
 
-//     // Mocking the behavior of blogModel.Blog.create() method
-//     blogModel.Blog.create = jest.fn().mockResolvedValue();
+    // Mocking the behavior of blogModel.Blog.create() method
+    blogModel.Blog.create = jest.fn().mockResolvedValue();
 
-//     // Fetch CSRF token
-//     const csrfResponse = await request(app).get("/csrf-token");
-//     const csrfToken = csrfResponse.body.csrfToken;
-//     console.log(csrfResponse.body.csrfToken);
+    // Fetch CSRF token
+    const csrfResponse = await request(app).get("/csrf-token");
+    const csrfToken = csrfResponse.body.csrfToken;
 
-//     // Making the request to the /insert route with CSRF token included in headers
-//     const response = await request(app)
-//       .post("/blogs/insert")
-//       .set("Cookie", `csrfToken=${csrfToken}`)
-//       .send(requestBody);
+    // Making the request to the /insert route with CSRF token included in headers
+    const response = await request(app)
+      .post("/blogs/insert")
+      .set("Cookie", `csrfToken=${csrfToken}`)
+      .send(requestBody);
 
-//     // Asserting the response status code
-//     expect(response.status).toBe(200);
+    // Asserting the response status code
+    expect(response.status).toBe(200);
 
-//     // Asserting that the blogModel.Blog.create() method was called with the correct parameters
-//     expect(blogModel.Blog.create).toHaveBeenCalledWith({
-//       title: requestBody.blog.blogTitle,
-//       content: requestBody.blog.blogContent,
-//       blogAuthor: requestBody.user.name,
-//       blog_user_id: requestBody.user._id,
-//       date: expect.any(String), // Assuming date format is correct
-//       blogImage: requestBody.image,
-//     });
+    // Asserting that the blogModel.Blog.create() method was called with the correct parameters
+    expect(blogModel.Blog.create).toHaveBeenCalledWith({
+      title: requestBody.blog.blogTitle,
+      content: requestBody.blog.blogContent,
+      blogAuthor: requestBody.user.name,
+      blog_user_id: requestBody.user._id,
+      date: expect.any(String), // Assuming date format is correct
+      blogImage: requestBody.image,
+    });
 
-//     // Asserting the response message
-//     expect(response.text).toBe("Blog uploaded");
-//   });
-// });
+    // Asserting the response message
+    expect(response.text).toBe("Blog uploaded");
+  });
+});
