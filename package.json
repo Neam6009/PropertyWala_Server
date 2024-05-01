@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -e js,ejs app",
-    "start": "cd src && node App.js"
+    "start": "node App.js"
   },
   "repository": {
     "type": "git",
@@ -34,10 +34,14 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.2.0",
+    "node-cache": "^5.1.2",
     "nodemailer": "^6.9.1",
     "nodemon": "^2.0.22",
     "path": "^0.12.7",
     "rotating-file-stream": "^3.2.1",
+    "swagger-docs": "^0.0.0-alpha2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
     "util": "^0.12.5",
     "xml": "^1.0.1"
   }
