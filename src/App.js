@@ -23,12 +23,12 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-const csrfProtection = csrf({ cookie: true });
+// const csrfProtection = csrf({ cookie: true });
 
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(jsonParser);
-app.use(csrfProtection);
+// app.use(csrfProtection);
 
 
 doenv.config({
@@ -64,9 +64,9 @@ app.get('/dockerTest', (req, res) => {
   res.send("docker works!!!")
 })
 
-app.get('/csrf-token', (req, res) => {
-  res.status(200).json({ csrfToken: req.csrfToken() });
-});
+// app.get('/csrf-token', (req, res) => {
+//   res.status(200).json({ csrfToken: req.csrfToken() });
+// });
 
 app.get("/users/all", userController.getAllUsers);
 app.post("/mail/:mailId", mailController.addMail);
