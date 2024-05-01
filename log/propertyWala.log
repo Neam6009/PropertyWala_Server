@@ -53,6 +53,7 @@ A new GET requires for /properties/all was received. It took 98.99 milliseconds 
 A new POST requires for /auth/login was received. It took 71.13 milliseconds to be resolved
 A new GET requires for /blogs/all was received. It took 114.36 milliseconds to be resolved
 A new GET requires for /properties/all was received. It took 86.86 milliseconds to be resolved
+<<<<<<< HEAD
 A new GET requires for /blogs/all was received. It took 6.25 milliseconds to be resolved
 A new GET requires for /blogs/all was received. It took 6.10 milliseconds to be resolved
 A new POST requires for /mail/example@example.com was received. It took 10.48 milliseconds to be resolved
@@ -146,3 +147,9 @@ A new GET requires for /properties/all was received. It took 5.90 milliseconds t
 A new GET requires for /blogs/all was received. It took 5.32 milliseconds to be resolved
 A new GET requires for /csrf-token was received. It took 6.21 milliseconds to be resolved
 A new POST requires for /blogs/insert was received. It took 15.55 milliseconds to be resolved
+=======
+A new GET requires for / was received. It took 63.64 milliseconds to be resolved
+A new GET requires for /favicon.ico was received. It took 4.14 milliseconds to be resolved
+A new GET requires for /dockerTest was received. It took 2.02 milliseconds to be resolved
+A new GET requires for /profileImage/18dce0af13cScreenshot%202023-12-02%20022215.png was received. It took 6.85 milliseconds to be resolved
+>>>>>>> 174f7752eb6a7989e13de7a42490d7979e330582
