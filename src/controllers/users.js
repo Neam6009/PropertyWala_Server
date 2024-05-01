@@ -52,13 +52,13 @@ exports.login = async (req, res) => {
           });
         } else {
           const id = user._id;
-          const token = jwt.sign({ id: id }, process.env.JWT_SECRET, {
-            expiresIn: process.env.JWT_EXPIRES_IN,
+          const token = jwt.sign({ id: id }, 1234, {
+            expiresIn: '90d',
           });
           console.log("The Token is " + token);
           const cookieOptions = {
             expires: new Date(
-              Date.now() + process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000
+              Date.now() + 90 * 24 * 60 * 60 * 1000
             ),
             httpOnly: true,
           };
@@ -162,7 +162,7 @@ exports.isLoggedIn = async (req, res, next) => {
     try {
       const decode = await promisify(jwt.verify)(
         req.cookies.joes,
-        process.env.JWT_SECRET
+        1234
       );
       const user = await userModel.User.findOne({ _id: decode.id });
       if (!user) {
