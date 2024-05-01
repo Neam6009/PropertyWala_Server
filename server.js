@@ -17,7 +17,7 @@ const swaggerOptions = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "CHS (Centralized Healthcare System)",
+      title: "PropertyWala",
       version: "1.0.0",
       description: "Api documentation for propertyWala",
     },
@@ -346,7 +346,7 @@ app.post("/admin/deleteUserByAdmin", userController.deleteUserByAdmin);
  */
 app.get("/profileImage/:imgId", (req, res) => {
   const imgId = req.params.imgId;
-  const parentDirectory = path.resolve(__dirname, "..");
+  const parentDirectory = path.resolve(__dirname);
   const root = parentDirectory.replace(/\\/g, "/");
   res.status(200).sendFile(`${root}/profileImages/${imgId}`);
 });
