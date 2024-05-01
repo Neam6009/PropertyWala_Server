@@ -17,7 +17,7 @@ const jsonParser = bodyParser.json();
 
 const app = express();
 const corsOptions = {
-  origin: ["https://property-wala-client-vercel.vercel.app", "http://localhost:5173", "*"],
+  origin: ["https://property-wala-client-vercel.vercel.app", "http://50.19.14.245:5173", "http://localhost:5173", "*"],
   credentials: true,
   optionsSuccessStatus: 200
 };
