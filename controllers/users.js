@@ -246,7 +246,10 @@ exports.deleteUserByAdmin = async (req, res) => {
 exports.setProfileImage = async (imgId, userId) => {
   const user = await userModel.User.findById(userId);
   user.profileImage = imgId;
+  const cacheUser = await cache.get(userId);
   await user.save();
+  if (cacheUser)
+    cache.set(userId, JSON.stringify(user), 1800);
 };
 
 exports.getAllUsers = async (req, res) => {
