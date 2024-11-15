@@ -46,15 +46,13 @@ const jsonParser = bodyParser.json();
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(jsonParser);
+
 const corsOptions = {
-  origin: [
-    "https://property-wala-client.vercel.app/",
-    "*"
-    
-  ],
-  credentials: true,
+  origin: "https://property-wala-client.vercel.app", // specific origin
+  credentials: true, // allow cookies or credentials to be sent
   optionsSuccessStatus: 200,
 };
+
 
 app.use(cors(corsOptions));
 
