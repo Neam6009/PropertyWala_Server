@@ -23,7 +23,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "http://localhost:3003/",
+        url: "http://localhost:3003/", "*"
       },
     ],
   },
@@ -48,10 +48,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(jsonParser);
 const corsOptions = {
   origin: [
-    "https://property-wala-client-vercel.vercel.app",
-    "http://50.19.14.245:5173",
-    "http://localhost:5173",
-    "*",
+    "https://property-wala-client.vercel.app/",
   ],
   credentials: true,
   optionsSuccessStatus: 200,
