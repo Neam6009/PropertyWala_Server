@@ -463,8 +463,5 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal Server Error' });
 });
 
-app.listen(process.env.PORT || 4000, () => {
-  console.log(`Listening at port  ${process.env.PORT || 4000}...`);
-});
 
 module.exports = app ;
