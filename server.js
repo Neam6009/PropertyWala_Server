@@ -84,7 +84,7 @@ app.use(morgan("customTokken", { stream: accessLogStream }));
 app.use(express.static(__dirname + "/profileImages"));
 app.set("view engine", "ejs");
 
-app.use("/", require("./routes/pages"));
+// app.use("/", require("./routes/pages"));
 app.use("/auth", require("./routes/auth"));
 app.use("/properties", require("./routes/propertiesRoute"));
 app.use("/blogs", require("./routes/blogsRoute"));
@@ -463,6 +463,10 @@ app.get('*', (req, res) => {
 app.use((err, req, res, next) => {
   console.error(err.stack); // Log the error stack for debugging
   res.status(500).json({ error: 'Internal Server Error' });
+});
+
+app.listen(process.env.PORT || 4000, () => {
+  console.log(`Listening at port  ${process.env.PORT || 4000}...`);
 });
 
 module.exports = app ;
