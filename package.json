@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -e js,ejs app",
-    "start": "node server.js",
+    "start": "node app.js",
     "test": "jest --reporters=default --reporters=jest-html-reporter"
   },
   "repository": {

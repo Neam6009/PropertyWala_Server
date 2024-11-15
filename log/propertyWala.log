@@ -171,3 +171,8 @@ A new GET requires for /sdsfa was received. It took 3.37 milliseconds to be reso
 A new GET requires for /sdsfa was received. It took 5.80 milliseconds to be resolved
 A new GET requires for / was received. It took 2.26 milliseconds to be resolved
 A new GET requires for /properties/all was received. It took 1154.81 milliseconds to be resolved
+A new GET requires for / was received. It took - milliseconds to be resolved
+A new GET requires for /properties/all was received. It took 2421.76 milliseconds to be resolved
+A new GET requires for /properties/all was received. It took 125.52 milliseconds to be resolved
+A new GET requires for /properties/all was received. It took 1438.33 milliseconds to be resolved
+A new GET requires for /properties/all was received. It took 422.50 milliseconds to be resolved
