@@ -8,7 +8,7 @@ doenv.config({
 
 mongoose
   .connect(
-    "mongodb+srv://neelesh:ZgSQfiS6kziYXoIT@propertywaladeployment.dhdxtm8.mongodb.net/WBD_DB?retryWrites=true&w=majority&appName=propertyWalaDeployment",
+    process.env.MONGODB_URI,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -16,7 +16,6 @@ mongoose
   )
   .then(() => {
     // console.log("Connected to MongoDB");
-    // Now you can start using your mongoose models
   })
   .catch((error) => {
     console.error("Error connecting to MongoDB:", error);

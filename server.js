@@ -23,7 +23,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "http://localhost:3003/", "*"
+        url: "http://localhost:3003/",
       },
     ],
   },
@@ -49,6 +49,8 @@ app.use(jsonParser);
 const corsOptions = {
   origin: [
     "https://property-wala-client.vercel.app/",
+    "*"
+    
   ],
   credentials: true,
   optionsSuccessStatus: 200,
@@ -450,9 +452,17 @@ app.use(logRoute);
  *                   type: string
  *                   example: Something went wrong!
  */
+
+app.get('*', (req, res) => {
+
+  res.status(404).send('Page Not Found!');
+
+});
+
+// General Error Handler
 app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ error: "Something went wrong!" });
+  console.error(err.stack); // Log the error stack for debugging
+  res.status(500).json({ error: 'Internal Server Error' });
 });
 
 module.exports = { app };
