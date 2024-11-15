@@ -82,7 +82,7 @@ app.use(morgan("customTokken", { stream: accessLogStream }));
 app.use(express.static(__dirname + "/profileImages"));
 app.set("view engine", "ejs");
 
-// app.use("/", require("./routes/pages"));
+app.use("/", require("./routes/pages"));
 app.use("/auth", require("./routes/auth"));
 app.use("/properties", require("./routes/propertiesRoute"));
 app.use("/blogs", require("./routes/blogsRoute"));
